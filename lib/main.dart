@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:kuliner_dramaga/constants.dart';
-import 'package:kuliner_dramaga/home_sreen.dart';
+import 'package:kuliner_dramaga/screens/home/home_sreen.dart';
 
 void main() => runApp(const MyApp());
 
