@@ -9,7 +9,6 @@ class GreetingBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
-    var defTextStyle = const TextStyle(fontFamily: 'Coolvetica');
     return Stack(
       children: <Widget>[
         Container(
@@ -34,7 +33,7 @@ class GreetingBar extends StatelessWidget {
               const Text('Hi, Dicoding!',
                   style: TextStyle(
                     color: Colors.white,
-                    fontSize: 40,
+                    fontSize: 30,
                     fontFamily: 'Coolvetica',
                   )),
               Container(

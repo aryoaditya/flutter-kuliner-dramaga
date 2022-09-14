@@ -1,10 +1,9 @@
 // ignore_for_file: deprecated_member_use
 
 import 'package:flutter/material.dart';
-// import 'package:kuliner_dramaga/constants.dart';
+import 'package:kuliner_dramaga/screens/home/components/drink_display.dart';
+import 'package:kuliner_dramaga/screens/home/components/food_display.dart';
 import 'components/greeting_bar.dart';
-import 'components/recommended_culinaries.dart';
-import 'components/title_with_more_btn.dart';
 
 var defTextStyle = const TextStyle(fontFamily: 'Coolvetica');
 
@@ -14,8 +13,9 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(elevation: 0, title: const Text('Kuliner Dramaga')),
-      body: const Body(),
+      appBar: AppBar(
+          elevation: 0, title: Text('DRAMAGA CULINARY', style: defTextStyle)),
+      body: Body(),
     );
   }
 }
@@ -30,18 +30,10 @@ class Body extends StatelessWidget {
       children: <Widget>[
         // Greeting
         const GreetingBar(),
-        // title Recommended
-        TitleWithMoreBtn(txt: "Recommended", press: () {}),
-        // content recommended
-        const RecommendedCulinaries(),
-        // title Foods
-        TitleWithMoreBtn(txt: "Foods", press: () {}),
-        // content Foods
-        const RecommendedCulinaries(),
-        // title Drinks
-        TitleWithMoreBtn(txt: "Drinks", press: () {}),
-        // content Drinks
-        const RecommendedCulinaries(),
+        //FoodDisplay(),
+        FoodDisplay(),
+        //FoodDisplay(),
+        DrinkDisplay(),
       ],
     ));
   }

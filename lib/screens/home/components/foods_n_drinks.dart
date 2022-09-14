@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:kuliner_dramaga/constants.dart';
+// import 'package:kuliner_dramaga/constants.dart';
 
+// class
 class FoodsNDrinks extends StatelessWidget {
   const FoodsNDrinks({
     Key? key,
@@ -17,54 +18,39 @@ class FoodsNDrinks extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Container(
-      margin: const EdgeInsets.only(
-        left: defaultPadding,
-        top: defaultPadding / 2,
-        bottom: defaultPadding * 2.5,
-      ),
-      width: size.width * 0.4,
-      child: Column(
-        children: <Widget>[
-          ClipRRect(
-            borderRadius: const BorderRadius.only(
-              topLeft: Radius.circular(10),
-              topRight: Radius.circular(10),
+      width: size.width * 0.45,
+      child: InkWell(
+        onTap: press,
+        child: Card(
+          child: Column(children: <Widget>[
+            Expanded(
+              flex: 3,
+              child: Container(
+                  decoration: BoxDecoration(
+                      image: DecorationImage(
+                          fit: BoxFit.fill, image: AssetImage(image)))),
             ),
-            child: Image.asset(image),
-          ),
-          GestureDetector(
-            onTap: press,
-            child: Container(
-              padding: const EdgeInsets.all(defaultPadding / 2),
-              decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: const BorderRadius.only(
-                      bottomLeft: Radius.circular(10),
-                      bottomRight: Radius.circular(10)),
-                  boxShadow: [
-                    BoxShadow(
-                        offset: const Offset(0, 10),
-                        blurRadius: 40,
-                        color: Colors.black.withOpacity(0.35))
-                  ]),
-              child: Row(children: <Widget>[
-                RichText(
-                    text: TextSpan(children: [
-                  TextSpan(
-                    text: "$title\n".toUpperCase(),
-                    style: Theme.of(context).textTheme.button,
+            Expanded(
+                flex: 2,
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Column(
+                    children: <Widget>[
+                      Text(
+                        title.toUpperCase(),
+                        textAlign: TextAlign.center,
+                        style: const TextStyle(fontWeight: FontWeight.bold),
+                      ),
+                      Text(
+                        street,
+                        textAlign: TextAlign.start,
+                        style: const TextStyle(color: Colors.grey, height: 2),
+                      )
+                    ],
                   ),
-                  TextSpan(
-                      text: street,
-                      style: const TextStyle(
-                        color: Colors.grey,
-                        height: 1,
-                      ))
-                ]))
-              ]),
-            ),
-          )
-        ],
+                ))
+          ]),
+        ),
       ),
     );
   }
