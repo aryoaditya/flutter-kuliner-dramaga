@@ -15,8 +15,11 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          elevation: 0, title: Text('DRAMAGA CULINARY', style: defTextStyle)),
-      body: Body(),
+        elevation: 0,
+        title: Text('DRAMAGA CULINARY', style: defTextStyle),
+        centerTitle: true,
+      ),
+      body: const Body(),
     );
   }
 }
@@ -30,11 +33,13 @@ class Body extends StatelessWidget {
         child: Column(
       children: const <Widget>[
         // Greeting
-        const GreetingBar(),
+        GreetingBar(),
         // Recommended Display
         RecDisplay(),
+        Padding(padding: EdgeInsets.only(top: 30)),
         // Food Display,
         FoodDisplay(),
+        Padding(padding: EdgeInsets.only(top: 30)),
         // Drink Display,
         DrinkDisplay(),
       ],

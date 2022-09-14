@@ -16,7 +16,7 @@ class FoodDisplay extends StatelessWidget {
         children: <Widget>[
           TitleWithMoreBtn(txt: "Foods", press: () {}),
           SizedBox(
-            height: 200.0,
+            height: 230.0,
             child: ListView.builder(
               physics: const ClampingScrollPhysics(),
               shrinkWrap: true,

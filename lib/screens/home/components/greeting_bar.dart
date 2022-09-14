@@ -42,7 +42,7 @@ class GreetingBar extends StatelessWidget {
                 decoration: const BoxDecoration(
                     shape: BoxShape.circle,
                     image: DecorationImage(
-                        image: AssetImage('assets/images/tampo.png'),
+                        image: AssetImage('assets/images/profile.jpg'),
                         fit: BoxFit.fill)),
               ),
             ],

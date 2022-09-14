@@ -15,11 +15,21 @@ class FoodMerchant extends Merchants {
 class Foods {
   String name;
   String price;
+  String image;
 
-  Foods({
-    required this.name,
-    required this.price,
-  });
+  Foods({required this.name, required this.price, required this.image});
+
+  String get getName {
+    return name;
+  }
+
+  String get getPrice {
+    return price;
+  }
+
+  String get getImage {
+    return image;
+  }
 }
 
 var foodMerchantList = [
@@ -30,10 +40,18 @@ var foodMerchantList = [
     openDays: 'Open Everyday',
     openTime: '24 hours',
     listFoods: [
-      Foods(name: 'nama makanan1', price: 'harganya1'),
-      Foods(name: 'nama makanan2', price: 'harganya2'),
-      Foods(name: 'nama makanan3', price: 'harganya3'),
-      Foods(name: 'nama makanan4', price: 'harganya4'),
+      Foods(
+          name: 'Pancong Original',
+          price: 'Rp 10.000',
+          image: 'assets/images/pancongori.jpg'),
+      Foods(
+          name: 'Pancong Cokelat',
+          price: 'Rp 13.000',
+          image: 'assets/images/pancongCoklat.jpeg'),
+      Foods(
+          name: 'Pancong Keju',
+          price: 'Rp 13.000',
+          image: 'assets/images/pancongKeju.jpg'),
     ],
   ),
   FoodMerchant(
@@ -43,10 +61,18 @@ var foodMerchantList = [
     openDays: 'Open Everyday',
     openTime: '08:00 - 21:00',
     listFoods: [
-      Foods(name: 'nama makanan1', price: 'harganya1'),
-      Foods(name: 'nama makanan2', price: 'harganya2'),
-      Foods(name: 'nama makanan3', price: 'harganya3'),
-      Foods(name: 'nama makanan4', price: 'harganya4'),
+      Foods(
+          name: 'Paket Combo',
+          price: 'Rp 46.000',
+          image: 'assets/images/paketCombo.jpg'),
+      Foods(
+          name: 'Paket Kentang',
+          price: 'Rp 25.000',
+          image: 'assets/images/paketKentang.jpg'),
+      Foods(
+          name: 'Paket Nasi',
+          price: 'Rp 18.000',
+          image: 'assets/images/paketNasi.jpg'),
     ],
   ),
   FoodMerchant(
@@ -56,10 +82,18 @@ var foodMerchantList = [
     openDays: 'Open Everyday',
     openTime: '08:00 - 21:00',
     listFoods: [
-      Foods(name: 'nama makanan1', price: 'harganya1'),
-      Foods(name: 'nama makanan2', price: 'harganya2'),
-      Foods(name: 'nama makanan3', price: 'harganya3'),
-      Foods(name: 'nama makanan4', price: 'harganya4'),
+      Foods(
+          name: 'Ayam Geprek Original',
+          price: 'Rp 18.000',
+          image: 'assets/images/ayamNasi.jpeg'),
+      Foods(
+          name: 'Ayam Tahu Tempe',
+          price: 'Rp 22.000',
+          image: 'assets/images/ayamTahu.jpeg'),
+      Foods(
+          name: 'Ayam Tahu Tempe Terong',
+          price: 'Rp 25.000',
+          image: 'assets/images/ayamTahuTerong.jpeg'),
     ],
   )
 ];

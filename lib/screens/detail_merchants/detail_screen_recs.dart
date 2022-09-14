@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:kuliner_dramaga/objects/foods.dart';
 import 'package:kuliner_dramaga/objects/recommended.dart';
 import 'components/back_btn.dart';
 import 'components/menu_title.dart';
 import 'components/merchant_info.dart';
-import 'components/merchant_menus.dart';
 import 'components/merchant_name.dart';
+import 'components/merchant_rec_menus.dart';
 
 var defTextStyle = const TextStyle(fontFamily: 'Coolvetica');
 
@@ -56,7 +55,7 @@ class Body extends StatelessWidget {
           MerchantsName(name: rec.name),
           MerchantInfo(openDays: rec.openDays, openTime: rec.openTime),
           const MenuTitle(),
-          const MerchantMenus(),
+          MerchantRecMenus(rec: rec),
         ],
       ),
     );

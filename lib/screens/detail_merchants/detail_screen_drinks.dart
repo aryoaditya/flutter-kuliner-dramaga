@@ -3,7 +3,7 @@ import 'package:kuliner_dramaga/objects/drinks.dart';
 import 'components/back_btn.dart';
 import 'components/menu_title.dart';
 import 'components/merchant_info.dart';
-import 'components/merchant_menus.dart';
+import 'components/merchant_drink_menus.dart';
 import 'components/merchant_name.dart';
 
 var defTextStyle = const TextStyle(fontFamily: 'Coolvetica');
@@ -55,7 +55,7 @@ class Body extends StatelessWidget {
           MerchantsName(name: drink.name),
           MerchantInfo(openDays: drink.openDays, openTime: drink.openTime),
           const MenuTitle(),
-          const MerchantMenus(),
+          MerchantDrinkMenus(drink: drink),
         ],
       ),
     );

@@ -17,21 +17,22 @@ class FoodsNDrinks extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
-    return Container(
+    return SizedBox(
       width: size.width * 0.45,
       child: InkWell(
         onTap: press,
         child: Card(
           child: Column(children: <Widget>[
             Expanded(
-              flex: 3,
+              flex: 7,
               child: Container(
                   decoration: BoxDecoration(
-                      image: DecorationImage(
-                          fit: BoxFit.fill, image: AssetImage(image)))),
+                image:
+                    DecorationImage(fit: BoxFit.fill, image: AssetImage(image)),
+              )),
             ),
             Expanded(
-                flex: 2,
+                flex: 4,
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Column(

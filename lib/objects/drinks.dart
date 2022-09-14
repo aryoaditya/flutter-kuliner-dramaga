@@ -15,11 +15,25 @@ class DrinkMerchant extends Merchants {
 class Drinks {
   String name;
   String price;
+  String image;
 
   Drinks({
     required this.name,
     required this.price,
+    required this.image,
   });
+
+  String get getName {
+    return name;
+  }
+
+  String get getPrice {
+    return price;
+  }
+
+  String get getImage {
+    return image;
+  }
 }
 
 var drinkMerchantList = [
@@ -30,10 +44,26 @@ var drinkMerchantList = [
     openDays: 'Open Everyday',
     openTime: '08:00 - 21:00',
     listDrinks: [
-      Drinks(name: 'nama minuman1', price: 'harganya1'),
-      Drinks(name: 'nama minuman2', price: 'harganya2'),
-      Drinks(name: 'nama minuman3', price: 'harganya3'),
-      Drinks(name: 'nama minuman4', price: 'harganya4'),
+      Drinks(
+          name: 'Avocado Coffee',
+          price: 'Rp 28.000',
+          image: 'assets/images/avocado.jpg'),
+      Drinks(
+          name: 'Americano',
+          price: 'Rp 15.000',
+          image: 'assets/images/Americano.jpg'),
+      Drinks(
+          name: 'Mocha Latte',
+          price: 'Rp 28.000',
+          image: 'assets/images/mocha.jpg'),
+      Drinks(
+          name: 'Kopi Susu Gula Aren',
+          price: 'Rp 20.000',
+          image: 'assets/images/kopisusuaren.jpg'),
+      Drinks(
+          name: 'Cappucino',
+          price: 'Rp 22.000',
+          image: 'assets/images/capucino.jpg')
     ],
   ),
   DrinkMerchant(
@@ -43,10 +73,22 @@ var drinkMerchantList = [
     openDays: 'Open Everyday',
     openTime: '08:00 - 21:00',
     listDrinks: [
-      Drinks(name: 'nama minuman1', price: 'harganya1'),
-      Drinks(name: 'nama minuman2', price: 'harganya2'),
-      Drinks(name: 'nama minuman3', price: 'harganya3'),
-      Drinks(name: 'nama minuman4', price: 'harganya4'),
+      Drinks(
+          name: 'Milk Chocolate',
+          price: 'Rp 15.000',
+          image: 'assets/images/milkChocolate.jpeg'),
+      Drinks(
+          name: 'Milk Tea Oreo',
+          price: 'Rp 18.000',
+          image: 'assets/images/milkTeaOreo.jpeg'),
+      Drinks(
+          name: 'Milk Grape',
+          price: 'Rp 15.000',
+          image: 'assets/images/milkAndGrape.jpeg'),
+      Drinks(
+          name: 'Oreo Milk',
+          price: 'Rp 15.000',
+          image: 'assets/images/MilkOreo.jpeg'),
     ],
   ),
   DrinkMerchant(
@@ -56,10 +98,26 @@ var drinkMerchantList = [
     openDays: 'Open Everyday',
     openTime: '08:00 - 21:00',
     listDrinks: [
-      Drinks(name: 'nama minuman1', price: 'harganya1'),
-      Drinks(name: 'nama minuman2', price: 'harganya2'),
-      Drinks(name: 'nama minuman3', price: 'harganya3'),
-      Drinks(name: 'nama minuman4', price: 'harganya4'),
+      Drinks(
+          name: 'Esteh Milo',
+          price: 'Rp 15.000',
+          image: 'assets/images/estehMilo.png'),
+      Drinks(
+          name: 'Esteh Susu',
+          price: 'Rp 15.000',
+          image: 'assets/images/estehSusu.png'),
+      Drinks(
+          name: 'Chizu Red Velvet',
+          price: 'Rp 19.000',
+          image: 'assets/images/chizuRedVelvet.png'),
+      Drinks(
+          name: 'Esteh Matcha Original',
+          price: 'Rp 15.000',
+          image: 'assets/images/matchaOri.png'),
+      Drinks(
+          name: 'Strawberry Seasalt Matcha',
+          price: 'Rp 19.000',
+          image: 'assets/images/strawberrySeasaltMatcha.png'),
     ],
   )
 ];
