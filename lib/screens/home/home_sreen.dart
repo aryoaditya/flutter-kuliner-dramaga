@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:kuliner_dramaga/screens/home/components/drink_display.dart';
 import 'package:kuliner_dramaga/screens/home/components/food_display.dart';
 import 'components/greeting_bar.dart';
+import 'components/rec_display.dart';
 
 var defTextStyle = const TextStyle(fontFamily: 'Coolvetica');
 
@@ -27,12 +28,14 @@ class Body extends StatelessWidget {
   Widget build(BuildContext context) {
     return SingleChildScrollView(
         child: Column(
-      children: <Widget>[
+      children: const <Widget>[
         // Greeting
         const GreetingBar(),
-        //FoodDisplay(),
+        // Recommended Display
+        RecDisplay(),
+        // Food Display,
         FoodDisplay(),
-        //FoodDisplay(),
+        // Drink Display,
         DrinkDisplay(),
       ],
     ));

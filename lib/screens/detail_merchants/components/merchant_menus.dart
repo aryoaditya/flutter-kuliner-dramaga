@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-// import 'package:kuliner_dramaga/objects/foods.dart';
-// import 'package:kuliner_dramaga/screens/home/home_sreen.dart';
 
 class MerchantMenus extends StatelessWidget {
   const MerchantMenus({
