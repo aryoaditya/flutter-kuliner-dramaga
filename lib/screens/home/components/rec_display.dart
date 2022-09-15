@@ -15,7 +15,9 @@ class RecDisplay extends StatelessWidget {
     return SingleChildScrollView(
       child: Column(
         children: <Widget>[
+          // Title of category
           TitleWithMoreBtn(txt: "Recommended", press: () {}),
+          // List of recommended foods and drinks
           SizedBox(
             height: 230.0,
             child: ListView.builder(
@@ -24,6 +26,7 @@ class RecDisplay extends StatelessWidget {
               scrollDirection: Axis.horizontal,
               itemBuilder: (BuildContext context, int index) {
                 final RecMerchant rec = recMerchantList[index];
+                // Card of recommended foods and drinks
                 return FoodsNDrinks(
                   image: rec.image,
                   title: rec.name,

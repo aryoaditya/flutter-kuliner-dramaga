@@ -4,13 +4,17 @@ import 'package:kuliner_dramaga/constants.dart';
 class GreetingBar extends StatelessWidget {
   const GreetingBar({
     Key? key,
+    required this.name,
   }) : super(key: key);
+
+  final String name;
 
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
+    Size size = MediaQuery.of(context).size; // Size screen
     return Stack(
       children: <Widget>[
+        // Green bar background
         Container(
           margin: const EdgeInsets.only(bottom: 20),
           padding: const EdgeInsets.only(left: 30, right: 30, bottom: 30),
@@ -30,12 +34,14 @@ class GreetingBar extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
-              const Text('Hi, Dicoding!',
-                  style: TextStyle(
+              // Greeting text
+              Text('Hi, $name !',
+                  style: const TextStyle(
                     color: Colors.white,
                     fontSize: 30,
                     fontFamily: 'Coolvetica',
                   )),
+              // Profile photo
               Container(
                 height: 70,
                 width: 70,

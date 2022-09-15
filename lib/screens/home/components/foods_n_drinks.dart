@@ -22,11 +22,17 @@ class FoodsNDrinks extends StatelessWidget {
       child: InkWell(
         onTap: press,
         child: Card(
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(20.0),
+          ),
           child: Column(children: <Widget>[
             Expanded(
               flex: 7,
               child: Container(
                   decoration: BoxDecoration(
+                borderRadius: const BorderRadius.only(
+                    topLeft: Radius.circular(20.0),
+                    topRight: Radius.circular(20.0)),
                 image:
                     DecorationImage(fit: BoxFit.fill, image: AssetImage(image)),
               )),

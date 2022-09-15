@@ -14,7 +14,9 @@ class FoodDisplay extends StatelessWidget {
     return SingleChildScrollView(
       child: Column(
         children: <Widget>[
+          // Title of category
           TitleWithMoreBtn(txt: "Foods", press: () {}),
+          // List of foods
           SizedBox(
             height: 230.0,
             child: ListView.builder(
@@ -23,6 +25,7 @@ class FoodDisplay extends StatelessWidget {
               scrollDirection: Axis.horizontal,
               itemBuilder: (BuildContext context, int index) {
                 final FoodMerchant food = foodMerchantList[index];
+                // Card of Food
                 return FoodsNDrinks(
                   image: food.image,
                   title: food.name,
